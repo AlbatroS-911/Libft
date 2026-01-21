@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tokrabem <tokrabem@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 19:24:37 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/21 09:20:04 by tokrabem         ###   ########.fr       */
+/*   Created: 2026/01/21 06:51:50 by tokrabem          #+#    #+#             */
+/*   Updated: 2026/01/21 09:41:56 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
+#include "stdlib.h"
 #include "libft.h"
-#include "string.h"
 
-int main()
+char	*ft_strdup(const char *s)
 {
-	printf("%s", ft_strchr("melloman", 'l'));
-	return 0;
+	char *dst;
+	int	i;
+	
+	dst =(char*) malloc(ft_strlen(dst) * sizeof(char) + 1);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		dst[i] = s[i];
+		i++;
+	}
+	return (dst);
+	free(dst);
 }

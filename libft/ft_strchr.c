@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tokrabem <tokrabem@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 19:24:37 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/21 09:20:04 by tokrabem         ###   ########.fr       */
+/*   Created: 2026/01/21 08:47:23 by tokrabem          #+#    #+#             */
+/*   Updated: 2026/01/21 09:45:09 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
-#include "libft.h"
-#include "string.h"
+#include "stdlib.h"
 
-int main()
+char *ft_strchr(const char *s, int c)
 {
-	printf("%s", ft_strchr("melloman", 'l'));
-	return 0;
+	int	count;
+	char	*res;
+
+	res = (char*)&s[0];
+	count = 0;
+	while (*res)
+	{
+		if(res[count] == c)
+			return(&res[count]);
+		count++;
+	}
+	return (NULL);
 }

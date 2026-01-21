@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tokrabem <tokrabem@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 19:24:37 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/21 09:20:04 by tokrabem         ###   ########.fr       */
+/*   Created: 2026/01/21 07:57:36 by tokrabem          #+#    #+#             */
+/*   Updated: 2026/01/21 10:26:01 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
-#include "libft.h"
 #include "string.h"
 
-int main()
+void	ft_bzero(void *s, size_t n)
 {
-	printf("%s", ft_strchr("melloman", 'l'));
-	return 0;
+	while (0 <= n - 1)
+	{
+		//s[n] = '0';
+		n--;
+		s++; 
+	}
 }
