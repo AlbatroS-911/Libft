@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toky <toky@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 07:57:36 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/22 14:03:25 by toky             ###   ########.fr       */
+/*   Created: 2026/01/22 14:28:02 by toky              #+#    #+#             */
+/*   Updated: 2026/01/22 14:47:08 by toky             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
-
-void	ft_bzero(void *s, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char *str;
+	unsigned char *dst;
+	unsigned const char *sr;
 
-	str = s;
+	dst = dest;
+	sr = src;
+	
 	while (n > 0)
 	{
-		*str = '0';
-		str++;
-		n--;	
+		*dst = *sr;
+		dst++;
+		sr++;
+		n--;
 	}
+	return (dest);
 }
