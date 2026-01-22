@@ -6,7 +6,7 @@
 /*   By: toky <toky@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 10:01:17 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/22 14:47:18 by toky             ###   ########.fr       */
+/*   Updated: 2026/01/22 20:33:00 by toky             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ size_t ft_strlen(const char *s);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 #endif
