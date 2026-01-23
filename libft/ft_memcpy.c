@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toky <toky@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/22 14:28:02 by toky              #+#    #+#             */
-/*   Updated: 2026/01/22 20:31:45 by toky             ###   ########.fr       */
+/*   Created: 2026/01/22 14:28:02 by tokrabem          #+#    #+#             */
+/*   Updated: 2026/01/23 08:26:57 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	dst = dest;
 	sr = src;
 	
-	while (n > 0)
+	if (dst == NULL)
+		return (NULL);
+	while (n--)
 	{
 		*dst = *sr;
 		dst++;
 		sr++;
-		n--;
 	}
 	return (dest);
 }

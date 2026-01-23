@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toky <toky@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 19:24:37 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/22 21:01:02 by toky             ###   ########.fr       */
+/*   Updated: 2026/01/23 08:43:31 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@ int main()
 {
 	char str[] = "abcdef";
 	//char src[] = "geeks";
-	memcpy(str + 2, str, 4);
+	char d[] = "abcdef";
+	memmove(str, str + 2, 4 * sizeof(char));
 	printf("%s\n", str);
-	ft_memcpy(str + 2, str, 4);
+	ft_memmove(d, d + 2, 4 * sizeof(char));
 	printf("%s", str);
 	return 0;
 }
