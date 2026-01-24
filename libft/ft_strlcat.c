@@ -3,26 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tokrabem <tokrabem@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 14:13:40 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/20 19:34:19 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/01/23 18:43:30 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdlib.h"
-
-static size_t ft_strlen(const char *s)
-{
-	int length;
-	
-	if (s == NULL)
-		return (0);
-	length = 0;
-	while (s[length] != '\0')
-		length++;
-	return (length);
-}
+#include "libft.h"
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t i;

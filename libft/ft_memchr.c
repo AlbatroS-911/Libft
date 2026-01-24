@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 08:47:23 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/23 12:04:39 by tokrabem         ###   ########.fr       */
+/*   Created: 2026/01/23 11:58:29 by tokrabem          #+#    #+#             */
+/*   Updated: 2026/01/23 12:47:55 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "string.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	count;
-	char	*res;
+	size_t	count;
+	unsigned char *str;
 
-	res = (char*)s;
+	str = (unsigned char *)s;
 	count = 0;
-	while (*res)
+	while (*str && count < n)
 	{
-		if(res[count] == c)
-			return(&res[count]);
+		if(str[count] == c)
+			return(&str[count]);	
 		count++;
 	}
 	return (NULL);

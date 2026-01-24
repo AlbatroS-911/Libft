@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 08:47:23 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/23 12:04:39 by tokrabem         ###   ########.fr       */
+/*   Created: 2026/01/23 12:51:10 by tokrabem          #+#    #+#             */
+/*   Updated: 2026/01/23 13:10:42 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "string.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	count;
-	char	*res;
-
-	res = (char*)s;
-	count = 0;
-	while (*res)
+	unsigned char *str1;
+	unsigned char *str2;
+	size_t i;
+	
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	i = 0;
+	while ((str1[i] != '\0' || str2[i] != '\0') && i < n)
 	{
-		if(res[count] == c)
-			return(&res[count]);
-		count++;
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
+		i++;
 	}
-	return (NULL);
+	return (0);
 }

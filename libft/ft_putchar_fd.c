@@ -1,29 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 08:47:23 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/23 12:04:39 by tokrabem         ###   ########.fr       */
+/*   Created: 2026/01/24 01:03:39 by tokrabem          #+#    #+#             */
+/*   Updated: 2026/01/24 01:05:11 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
-
-char	*ft_strchr(const char *s, int c)
+#include "unistd.h"
+void	ft_putchar_fd(char c, int fd)
 {
-	int	count;
-	char	*res;
-
-	res = (char*)s;
-	count = 0;
-	while (*res)
-	{
-		if(res[count] == c)
-			return(&res[count]);
-		count++;
-	}
-	return (NULL);
+	write(fd, &c, 1);
 }

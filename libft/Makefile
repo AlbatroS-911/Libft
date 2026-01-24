@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: toky <toky@student.42.fr>                  +#+  +:+       +#+         #
+#    By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/20 19:37:35 by tokrabem          #+#    #+#              #
-#    Updated: 2026/01/22 14:13:22 by toky             ###   ########.fr        #
+#    Updated: 2026/01/23 15:11:35 by tokrabem         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #NAME = libft.a
 CC = cc
 EXEC = output
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -lbsd
 SRC = $(wildcard *.c)
 OBJ = $(SRC:.c = .o)
 

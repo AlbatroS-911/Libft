@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 08:47:23 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/23 12:04:39 by tokrabem         ###   ########.fr       */
+/*   Created: 2026/01/23 15:23:09 by tokrabem          #+#    #+#             */
+/*   Updated: 2026/01/23 16:44:41 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "string.h"
 #include "stdlib.h"
-
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	count;
-	char	*res;
+	size_t dim;
+	void	*mem;
 
-	res = (char*)s;
-	count = 0;
-	while (*res)
+	dim = nmemb * size;
+	mem = malloc(dim* sizeof(mem));
+	if (nmemb == 0 || size == 0)
 	{
-		if(res[count] == c)
-			return(&res[count]);
-		count++;
+		return(NULL);
+		free(mem);
 	}
-	return (NULL);
+	else
+		ft_bzero(mem, dim);
+	return (mem);
 }
