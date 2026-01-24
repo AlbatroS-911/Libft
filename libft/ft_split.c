@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 21:27:36 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/24 08:36:52 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/01/24 08:49:32 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	**ft_split(char const *s, char c)
 		{
 			splitted[i][j] = s[k];
 			k++;
+			j++;
 			if (s[k] == c)
 				break;
 		}
