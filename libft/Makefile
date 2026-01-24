@@ -6,7 +6,7 @@
 #    By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/20 19:37:35 by tokrabem          #+#    #+#              #
-#    Updated: 2026/01/23 15:11:35 by tokrabem         ###   ########.fr        #
+#    Updated: 2026/01/24 08:36:10 by tokrabem         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,4 +26,4 @@ $(EXEC) : $(OBJ)
 	$(CC) -o $(OBJ) -c $(SRC) $(CFLAGS)
 
 clean :
-	rm -rf *.o $(EXEC)
+	rm -rf *.o $(EXEC) 
