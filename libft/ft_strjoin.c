@@ -6,12 +6,13 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 18:10:58 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/23 19:33:48 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/01/24 07:49:49 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "stdlib.h"
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new_str;
