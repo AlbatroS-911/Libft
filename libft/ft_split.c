@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 21:27:36 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/24 08:49:32 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/01/26 20:21:53 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,28 @@
 
 char	**ft_split(char const *s, char c)
 {
-	char **splitted;
-	int	i;
-	int	j;
-	int k;
+	char	**splitted_str;
+	char	*buffer;
+	size_t i;
+	size_t j;
+	size_t k;
 
-	splitted = (char **) malloc(sizeof(char *) * ft_strlen(s));
 	i = 0;
-	k= 0;
-	if (!splitted)
-		return (NULL);
-	while (splitted)
+	k = 0;
+	while (*s)
 	{
 		j = 0;
-		while (s[k] != '\0')
+		while (j < ft_strlen(s))
 		{
-			splitted[i][j] = s[k];
-			k++;
+			buffer[j] = s[i];
+			i++;
 			j++;
-			if (s[k] == c)
+			if (s[i] == c)
 				break;
 		}
+		i = i + 1;
+		ft_memcpy(splitted_str[k], buffer, j + 1);
 		k++;
-		i++;
 	}
-	return (splitted);
+	return (splitted_str);
 }

@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:53:47 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/23 18:03:12 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/01/26 19:17:36 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		k++;
 		start++;
 	}
+	sub_str[k] = '\0';
 	return (sub_str);
 }

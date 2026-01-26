@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 19:24:37 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/24 08:34:20 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/01/26 20:24:23 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,14 @@
 
 int main()
 {
-	char s[] = "hey congrat's my bud civil monkey. I can see your can inside my closet";
-	char **res;
+	char s[] = "Falling for you again shawty";
+	char **strs = ft_split(s, ' ');
+	//char set[] = "t";
 	int i;
-
-	res = ft_split(s, 'c');
-	while (i < 25)
+	i = 0;
+	while (i < 5)
 	{
-		ft_putstr_fd(res[i], 1);
-		ft_putchar_fd(' ', 1);
-		i++;
+		printf("%s ",strs[i]);
 	}
  	return 0;
 }
