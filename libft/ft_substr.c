@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:53:47 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/26 19:17:36 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/01/26 21:42:43 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	str = (char *)s;
 	k = 0;
-	sub_str = (char*)malloc((len - start) * sizeof(char));
+	sub_str = (char*)malloc((len - start + 1) * sizeof(char));
 	if(!sub_str)
 		return (NULL);
 	while (str[start - 1] && k < len && start - 1 < len)

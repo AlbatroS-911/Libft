@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 19:24:37 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/26 20:24:23 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/01/26 21:44:21 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ int main()
 	{
 		printf("%s ",strs[i]);
 	}
+	//printf("%s", ft_substr(s, 2, 15));
  	return 0;
 }
