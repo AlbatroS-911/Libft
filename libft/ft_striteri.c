@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 18:07:12 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/13 13:36:11 by tokrabem         ###   ########.fr       */
+/*   Created: 2026/02/13 14:47:00 by tokrabem          #+#    #+#             */
+/*   Updated: 2026/02/13 16:20:38 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_atoi(const char *nptr)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int	i;
-	int nbr;
-	int sign;
+	unsigned int	i;
 
 	i = 0;
-	sign = 1;
-	nbr = 0;
-
-	while ((nptr[i] == 32) || (nptr[i] >= 7 && nptr[i] <= 13))
-		i++;
-	while (nptr[i] == '+' || nptr[i] == '-')
+	if (!s || !f)
+		return ;
+	while (s[i])
 	{
-		if(nptr[i] == '-')
-			sign = sign * -1;
+		(*f)(i, &s[i]);
 		i++;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		nbr = nbr * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (nbr * sign);
 }

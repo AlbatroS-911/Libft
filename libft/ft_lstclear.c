@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 18:07:12 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/13 13:36:11 by tokrabem         ###   ########.fr       */
+/*   Created: 2026/02/13 22:28:10 by tokrabem          #+#    #+#             */
+/*   Updated: 2026/02/13 23:36:22 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int	i;
-	int nbr;
-	int sign;
+	t_list *temp;
 
-	i = 0;
-	sign = 1;
-	nbr = 0;
-
-	while ((nptr[i] == 32) || (nptr[i] >= 7 && nptr[i] <= 13))
-		i++;
-	while (nptr[i] == '+' || nptr[i] == '-')
+	temp = *lst;
+	if (!del)
+		return;
+	while (lst)
 	{
-		if(nptr[i] == '-')
-			sign = sign * -1;
-		i++;
+		temp = (*lst)->next;
+		ft_lstdelone((*lst), del);
+		(*lst) = temp;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		nbr = nbr * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (nbr * sign);
+	free(*lst);
+	(*lst) = NULL;
 }

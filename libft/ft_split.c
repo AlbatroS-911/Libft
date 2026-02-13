@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toky <toky@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 21:27:36 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/09 18:30:29 by toky             ###   ########.fr       */
+/*   Updated: 2026/02/13 15:19:40 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**splitted_str;
 
-	if (!s)
+	if (!s || c)
 		return (NULL);
 	splitted_str = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!splitted_str)
@@ -59,18 +59,16 @@ char	**splitted_string(const char *s, char sep)
 
 	i = 0;
 	k = 0;
-	while (s[i] != '\0')
+	tab = malloc((count_words(s, sep) + 1) * sizeof(char *));
+	while (*s && k < count_words(s, sep))
 	{
-		if (s[i] == sep)
+		while (s[i] == sep)
 			i++;
-		else
-		{
-			j = i;
-			while (s[i] != '\0' && s[i] != sep)
-				i++;
-			tab[k] = ft_substr(s, j, i - j);
-			k++;
-		}
+		j = i;
+		while (s[i] != sep)
+			i++;
+		tab[k] = ft_substr(s, j, i - j);
+		k++;	
 	}
 	tab[k] = NULL;
 	return (tab);

@@ -3,30 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toky <toky@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 19:24:37 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/09 17:47:17 by toky             ###   ########.fr       */
+/*   Updated: 2026/02/13 18:49:59 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 #include "libft.h"
 #include "string.h"
-
+#include "limits.h"
 
 int main()
 {
-	char *s = "Falling for you again shawty";
-	char **strs = ft_split(s, ' ');
-	//char set[] = "t";
-	int i;
-	i = 0;
-	while (strs[i] != 0)
+	int content1 = 42;
+	t_list *node1 = ft_lstnew(&content1);
+	
+	if (!node1)
 	{
-		printf("%s\n", strs[i]);
-		i++;
+		printf( "Test failed with node2");
+		return (1);
 	}
-	//printf("%s", ft_strtrim(s, "ab"));
- 	return 0;
+
+	char *content2 = "Hello world";
+	t_list *node2 = ft_lstnew(content2);
+	
+	if (!node2)
+	{
+		printf("Test failed with node2");
+		return (1);
+	}
+	printf("Test 1 : %p -> %d\n", (void *)node1, *(int*)node1->content);
+	printf("Test 2 : %p -> %s\n", (void *)node2, (char *)node2->content);
+
+	free(node1);
+	free(node2);
+	return 0;
+	
 }

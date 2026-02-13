@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 18:07:12 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/13 13:36:11 by tokrabem         ###   ########.fr       */
+/*   Created: 2026/02/13 19:22:03 by tokrabem          #+#    #+#             */
+/*   Updated: 2026/02/13 20:38:15 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_atoi(const char *nptr)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
-	int nbr;
-	int sign;
 
 	i = 0;
-	sign = 1;
-	nbr = 0;
-
-	while ((nptr[i] == 32) || (nptr[i] >= 7 && nptr[i] <= 13))
-		i++;
-	while (nptr[i] == '+' || nptr[i] == '-')
+	if (!lst)
+		return (0);
+	while (lst->next != NULL)
 	{
-		if(nptr[i] == '-')
-			sign = sign * -1;
 		i++;
+		//lst = lst->next;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		nbr = nbr * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (nbr * sign);
+	return (i);
 }
