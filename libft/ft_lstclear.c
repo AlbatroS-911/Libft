@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 22:28:10 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/13 23:36:22 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 06:49:01 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	temp = *lst;
 	if (!del)
 		return;
-	while (lst)
+	while (*lst)
 	{
 		temp = (*lst)->next;
 		ft_lstdelone((*lst), del);
-		(*lst) = temp;
+		*lst = temp;
 	}
 	free(*lst);
 	(*lst) = NULL;
