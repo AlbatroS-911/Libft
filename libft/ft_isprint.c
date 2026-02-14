@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tokrabem <tokrabem@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:20:43 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/20 13:39:27 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:45:42 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if(!(c >= 32 && c <= 126))
+	if (!(c >= 32 && c <= 126))
 		return (0);
 	return (1);
 }

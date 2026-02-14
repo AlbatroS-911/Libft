@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 12:51:10 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/23 13:10:42 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:49:05 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *str1;
-	unsigned char *str2;
-	size_t i;
-	
+	unsigned char	*str1;
+	unsigned char	*str2;
+	size_t			i;
+
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
 	i = 0;

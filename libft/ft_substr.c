@@ -6,12 +6,12 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:53:47 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/13 13:45:33 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 08:00:25 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"string.h"
-#include"stdlib.h"
+#include "string.h"
+#include "stdlib.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -21,8 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	str = (char *)s;
 	k = 0;
-	sub_str = (char*)malloc((len + 1) * sizeof(char));
-	if(!sub_str)
+	sub_str = (char *)malloc((len + 1) * sizeof(char));
+	if (!sub_str)
 		return (NULL);
 	while (str[start] && k < len)
 	{

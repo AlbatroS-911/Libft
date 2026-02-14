@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tokrabem <tokrabem@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 10:23:30 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/20 19:25:41 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:45:14 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if(!((c >= 65 && c <= 90) || (c >= 97 && c <= 122)))
+	if (!((c >= 65 && c <= 90) || (c >= 97 && c <= 122)))
 		return (0);
 	return (1);
 }

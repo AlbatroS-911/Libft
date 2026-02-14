@@ -6,14 +6,15 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 01:10:43 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/24 01:13:17 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:52:13 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "unistd.h"
+
 void	ft_putendl_fd(char *s, int fd)
 {
 	while (*s)
 		write(fd, s++, 1);
-	write(fd, "\n", 1);	
+	write(fd, "\n", 1);
 }

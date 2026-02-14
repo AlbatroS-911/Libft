@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tokrabem <tokrabem@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 15:53:04 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/20 19:26:30 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 08:00:32 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	if(!(c >= 65 && c <= 90))
+	if (!(c >= 65 && c <= 90))
 		return (c);
 	return (c + 32);
 }

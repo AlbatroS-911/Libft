@@ -6,14 +6,13 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 11:47:28 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/13 15:07:33 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:45:37 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 int	ft_isdigit(int c)
 {
-	if(!(c >= '0' && c <= '9'))
+	if (!(c >= '0' && c <= '9'))
 		return (0);
 	return (1);
 }

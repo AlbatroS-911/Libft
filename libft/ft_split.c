@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 21:27:36 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/13 15:19:40 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:53:48 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ char	**ft_split(char const *s, char c)
 	return (splitted_str);
 }
 
-static int count_words(const char *str, char sep)
+static int	count_words(const char *str, char sep)
 {
 	int	i;
-	int count;
-	
+	int	count;
+
 	i = 0;
 	count = 0;
 	while (*str)
@@ -43,7 +43,7 @@ static int count_words(const char *str, char sep)
 			i = 1;
 			count++;
 		}
-		else if(*str == sep)
+		else if (*str == sep)
 			i = 0;
 		str++;
 	}
@@ -68,7 +68,7 @@ char	**splitted_string(const char *s, char sep)
 		while (s[i] != sep)
 			i++;
 		tab[k] = ft_substr(s, j, i - j);
-		k++;	
+		k++;
 	}
 	tab[k] = NULL;
 	return (tab);

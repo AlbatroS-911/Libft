@@ -6,15 +6,16 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 18:28:22 by toky              #+#    #+#             */
-/*   Updated: 2026/01/23 15:54:10 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:51:48 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
+
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *str;
-	
+	unsigned char	*str;
+
 	str = (unsigned char *)s;
 	while (n > 0)
 	{

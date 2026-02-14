@@ -6,13 +6,14 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 01:08:06 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/24 01:09:02 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:52:54 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "unistd.h"
+
 void	ft_putstr_fd(char *s, int fd)
 {
-	while(*s)
-		write(fd, s++, 1);	
+	while (*s)
+		write(fd, s++, 1);
 }

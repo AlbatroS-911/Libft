@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tokrabem <tokrabem@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 14:02:10 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/20 23:02:49 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:56:16 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, char *src, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (src == NULL)
@@ -24,5 +24,5 @@ size_t	ft_strlcpy(char *dst, char *src, size_t size)
 		dst[i] = src[i];
 		i++;
 	}
-	return(i);
+	return (i);
 }

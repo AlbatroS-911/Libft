@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 08:47:23 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/23 12:04:39 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:54:12 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	count;
+	int		count;
 	char	*res;
 
-	res = (char*)s;
+	res = (char *)s;
 	count = 0;
 	while (*res)
 	{
-		if(res[count] == c)
-			return(&res[count]);
+		if (res[count] == c)
+			return (&res[count]);
 		count++;
 	}
 	return (NULL);

@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 20:13:57 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/14 07:26:58 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:42:24 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *last;
+	t_list	*last;
+
 	if (*lst == NULL)
 	{
 		*lst = new;
-		return;
+		return ;
 	}
 	last = *lst;
 	while (last->next != NULL)

@@ -6,11 +6,12 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 01:03:39 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/24 01:05:11 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:51:57 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "unistd.h"
+
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);

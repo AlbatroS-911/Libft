@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tokrabem <tokrabem@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 12:07:18 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/20 15:10:47 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 07:45:28 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-	if(!(c >= 0 && c <= 127))
+	if (!(c >= 0 && c <= 127))
 		return (0);
 	return (1);
 }

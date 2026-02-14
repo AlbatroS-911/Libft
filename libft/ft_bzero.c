@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toky <toky@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 07:57:36 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/01/22 14:03:25 by toky             ###   ########.fr       */
+/*   Updated: 2026/02/14 07:42:57 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *str;
+	unsigned char	*str;
 
 	str = s;
 	while (n > 0)
 	{
 		*str = '0';
 		str++;
-		n--;	
+		n--;
 	}
 }
