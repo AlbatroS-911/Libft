@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 07:57:36 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/14 07:42:57 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/14 09:25:54 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*str;
+	char	*str;
 
-	str = s;
+	str = (char *)s;
 	while (n > 0)
 	{
-		*str = '0';
+		*str = 0;
 		str++;
 		n--;
 	}
