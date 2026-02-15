@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 19:35:16 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/14 07:59:57 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/15 23:40:44 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*trimmed_str;
 
 	beg = 0;
-	end = ft_strlen(s1) - 1;
-	trimmed_str = malloc(ft_strlen(trimmed_str) * sizeof(char));
-	if (!s1 || !set)
+	end = ft_strlen(s1);
+	if (!s1)
 		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	if (beg == end)
 		return (ft_strdup(""));
 	while (contain(set, s1[beg]))

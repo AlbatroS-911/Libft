@@ -6,23 +6,23 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:59:09 by toky              #+#    #+#             */
-/*   Updated: 2026/02/14 07:50:43 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/15 20:26:21 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "string.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*dst;
-	const unsigned char	*sr;
+	unsigned char		*sr;
 	size_t				i;
 
+	if (!dest && !src)
+		return (NULL);
 	i = 0;
 	dst = (unsigned char *)dest;
-	sr = (const unsigned char *)src;
-	if (!dest || !src)
-		return (NULL);
+	sr = (unsigned char *)src;
 	if (dst > sr)
 		while (n-- > 0)
 			dst[n] = sr[n];

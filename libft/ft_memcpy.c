@@ -6,11 +6,11 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:28:02 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/14 07:49:30 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/15 17:21:33 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "string.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

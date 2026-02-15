@@ -6,29 +6,31 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:53:47 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/14 08:00:25 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/16 00:14:08 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "string.h"
-#include "stdlib.h"
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*str;
 	char			*sub_str;
 	unsigned int	k;
 
-	str = (char *)s;
 	k = 0;
-	sub_str = (char *)malloc((len + 1) * sizeof(char));
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) <= start)
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	sub_str = malloc((len + 1) * sizeof(char));
 	if (!sub_str)
 		return (NULL);
-	while (str[start] && k < len)
+	while (k < len)
 	{
-		sub_str[k] = str[start];
+		sub_str[k] = s[start + k];
 		k++;
-		start++;
 	}
 	sub_str[k] = '\0';
 	return (sub_str);

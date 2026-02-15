@@ -6,27 +6,27 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 15:23:09 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/14 07:44:25 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/15 20:21:58 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "string.h"
-#include "stdlib.h"
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	dim;
 	void	*mem;
 
-	dim = nmemb * size;
-	mem = malloc(dim * sizeof(mem));
 	if (nmemb == 0 || size == 0)
-	{
+		return (malloc(0));
+	if (size != 0 && (nmemb > __SIZE_MAX__ / size))
 		return (NULL);
-		free(mem);
-	}
+	mem = malloc(nmemb * size);
+	if (!mem)
+		return (NULL);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
 	else
-		ft_bzero(mem, dim);
+		ft_bzero(mem, nmemb * size);
 	return (mem);
+	free(mem);
 }
