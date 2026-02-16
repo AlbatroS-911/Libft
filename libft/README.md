@@ -150,9 +150,9 @@ struct s_list *next;
 -  `ft_lstmap` - Create new list by applying function to each element
 
 ## Technical Details
-All the functions follow the rules and the Norme solicited  by 42
-Each function has been tested in several ways and don't show any form of error expect the part 1 that reproduce the same behavior as the original one even it shows any error
+All the functions follow the rules and the Norme solicited  by 42.\
+Each function has been tested in several ways and don't show any form of error expect the part 1 that reproduce the same behavior as the original one even it shows any error.
 
 ## Author 
-42 login : *tokrabem*
+42 login : *tokrabem*\
 For eventual questions or remarks, feel free to contact me within 42 network
