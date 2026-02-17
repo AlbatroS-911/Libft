@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:59:09 by toky              #+#    #+#             */
-/*   Updated: 2026/02/15 20:26:21 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/16 22:01:40 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char		*sr;
 	size_t				i;
 
-	if (!dest && !src)
-		return (NULL);
 	i = 0;
 	dst = (unsigned char *)dest;
 	sr = (unsigned char *)src;

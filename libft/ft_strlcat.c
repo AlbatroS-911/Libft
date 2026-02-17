@@ -6,11 +6,10 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 14:13:40 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/15 13:56:57 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/16 19:46:55 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)

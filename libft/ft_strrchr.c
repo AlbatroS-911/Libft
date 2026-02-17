@@ -6,12 +6,11 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 09:00:10 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/14 10:07:24 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/16 19:47:43 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdlib.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

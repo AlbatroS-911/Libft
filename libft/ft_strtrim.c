@@ -6,12 +6,11 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 19:35:16 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/15 23:40:44 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/16 19:47:50 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdlib.h"
 
 static int	contain(const char *set, char c)
 {

@@ -6,25 +6,11 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 21:27:36 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/16 00:46:09 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/17 07:26:41 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	count_words(const char *str, char sep);
-static char	**splitted_string(const char *s, char sep);
-static void	*free_splitted(char **splitted_str, int i);
-
-char	**ft_split(char const *s, char c)
-{
-	char	**splitted_str;
-
-	if (!s)
-		return (NULL);
-	splitted_str = splitted_string(s, c);
-	return (splitted_str);
-}
 
 static int	count_words(const char *str, char sep)
 {
@@ -45,6 +31,17 @@ static int	count_words(const char *str, char sep)
 		str++;
 	}
 	return (count);
+}
+
+static void	*free_splitted(char **splitted_str, int i)
+{
+	while (i >= 0)
+	{
+		free(splitted_str[i]);
+		i--;
+	}
+	free(splitted_str);
+	return (NULL);
 }
 
 static char	**splitted_string(const char *s, char sep)
@@ -75,13 +72,12 @@ static char	**splitted_string(const char *s, char sep)
 	return (tab);
 }
 
-static void	*free_splitted(char **splitted_str, int i)
+char	**ft_split(char const *s, char c)
 {
-	while (i >= 0)
-	{
-		free(splitted_str[i]);
-		i--;
-	}
-	free(splitted_str);
-	return (NULL);
+	char	**splitted_str;
+
+	if (!s)
+		return (NULL);
+	splitted_str = splitted_string(s, c);
+	return (splitted_str);
 }

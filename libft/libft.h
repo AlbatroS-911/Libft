@@ -6,13 +6,14 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 10:01:17 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/15 13:49:50 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/16 21:32:29 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include "stdlib.h"
+# include "unistd.h"
 
 int		ft_atoi(const char *nptr);
 int		ft_isalnum(int c);

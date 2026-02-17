@@ -6,11 +6,11 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 07:57:36 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/14 09:25:54 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/16 20:48:30 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "string.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

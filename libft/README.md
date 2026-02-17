@@ -151,7 +151,7 @@ struct s_list *next;
 
 ## Technical Details
 All the functions follow the rules and the Norme solicited  by 42.\
-Each function has been tested in several ways and don't show any form of error expect the part 1 that reproduce the same behavior as the original one even it shows any error.
+Each function has been tested in several ways and don't show any form of error expect the part 1 that reproduce the same behavior as the original one even it shows any error
 
 ## Author 
 42 login : *tokrabem*\
